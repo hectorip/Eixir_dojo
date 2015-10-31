@@ -6,12 +6,8 @@ defmodule Finanzas do
   end
 
   def desglose(precio_total) do
+    {iva, precio_sin_iva} = calcaular_iva(precio_total)
     # precio_sin_iva, iva, precio_total
-    {}
-  end
-
-  defp precio_sin_va(precio_total, tasa \\ 16) do
-
-  end
- 
+    :io.format("El desglose del precio es ~nSubotal: ~f;~nIVA: ~f;~nTotal: ~f", [precio_sin_iva, iva, precio_total*1.0])  
+  end 
 end
