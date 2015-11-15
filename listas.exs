@@ -1,7 +1,9 @@
 defmodule Listas do
 
   # [head | tail] = [1,2,3,4]
-
+  def suma([]) do
+    0
+  end
   def suma( [ head | tail ] ) do
     _suma(tail, head)
     # suma([2,3,4], 1)
