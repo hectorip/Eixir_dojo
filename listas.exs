@@ -30,7 +30,10 @@ defmodule ListasTest do
   test 'prueba de la suma' do
     assert Listas.suma([1, 2, 3]) == 6
   end
-
+  
+  test 'prueba vacía' do
+    assert Listas.suma([]) == 0
+  end
 
 end
 
