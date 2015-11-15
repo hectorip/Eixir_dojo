@@ -29,12 +29,6 @@ defmodule ListasTest do
 
   test 'prueba de la suma' do
     assert Listas.suma([1, 2, 3]) == 6
-    #assert 1 + 1 == 3                      # Elixir is smart! No need for assert_equal, assert_gte, etc.
-                                            # And we still get great failure messages, yipee!
-                                          # 1) test_assert (MyTest)
-                                            #    ** (ExUnit.ExpectationError)
-                                            #                 expected: 2
-                                            #      to be equal to (==): 3
   end
 
 
