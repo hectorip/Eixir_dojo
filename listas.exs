@@ -44,6 +44,10 @@ defmodule ListasTest do
   test 'prueba vacía' do
     assert Listas.suma([]) == 0
   end
-
+  
+  test 'suma correcta sin acumulador' do
+    list = Enum.to_list(1..100)
+    assert Listas.suma_no_acc(list) == 5050
+  end
 end
 
