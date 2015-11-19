@@ -8,7 +8,7 @@ defmodule Listas do
     _suma(tail, head)
     # suma([2,3,4], 1)
   end
-
+  
   defp _suma([ head | tail ], acumulador) do
     _suma(tail, acumulador + head )
     # suma([3,4], 3)
@@ -19,6 +19,14 @@ defmodule Listas do
   defp _suma([], acumulador) do
     acumulador
     # 10
+  end
+  
+  # suma sin acumulador
+  def suma_no_acc([]) do
+    0
+  end
+  def suma_no_acc([head | tail ]) do
+    head + suma_no_acc(tail)
   end
 
 end
