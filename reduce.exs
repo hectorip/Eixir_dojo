@@ -1,6 +1,6 @@
 defmodule Functional do
-  def reduce([head|[]], f) do
-    head
+  def reduce([last], f) do
+    last
   end
   def reduce([head | tail], f) do
     f.(head, reduce(tail, f))
