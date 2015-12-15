@@ -12,10 +12,10 @@ defmodule Functional do
 end
 
 
-ExUnit.start                                # set up the test runner
+ExUnit.start
 
 defmodule FunctionalTest do
-  use ExUnit.Case                          # use requires a module and sets up macros; will explore more later
+  use ExUnit.Case
 
   test 'prueba de reduce con funcion suma' do
     assert Functional.reduce([1, 2, 3], &(&1 + &2)) == 6
