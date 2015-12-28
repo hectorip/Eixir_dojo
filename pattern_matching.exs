@@ -4,7 +4,7 @@
 a = 2
 2 = a  # Esto es un afirmación
 
-# 3 = a  Esto no es un matchea
+# 3 = a  Esto no es matchea
 
 # Enlazar (relacionar un nombre de variable con un valor)
 a = 3
