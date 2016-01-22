@@ -3,11 +3,13 @@ defmodule GreaterNumber do
     len = get_max_length(list) 
     norm = Enum.map(list, fn n ->
       sn = Integer.to_string n 
-      first = sn[0]
+      first = String.first(sn)
+
       nn = String.ljust(sn, len, first) |> String.to_integer
+      # WE need to complete with the highest number available that makes the digit count equal
       {nn, n}
     end)
-    IO.inspect norm
+
   end
 
   @doc "Returns the length of the longest number"
