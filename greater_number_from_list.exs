@@ -1,4 +1,4 @@
-defmodule GreaterNumber do
+defmodule GreatestNumber do
   def get(list) do
     len = get_max_length(list) 
     norm = Enum.map(list, fn n ->
@@ -22,11 +22,11 @@ end
 
 ExUnit.start                                # set up the test runner
 
-defmodule ListasTest do
+defmodule GreatestNumberTest do
   use ExUnit.Case                          # use requires a module and sets up macros; will explore more later
 
   test 'Basic Test' do
-    assert GreaterNumber.get([50, 2, 9, 1]) == 95021
+    assert GreatestNumber.get([50, 2, 9, 1]) == 95021
   end
  
 end
