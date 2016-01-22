@@ -16,13 +16,14 @@ defmodule GreaterNumber do
   end
 end
 
+# Failing Repeating the first number: 53(55), 5354, 52
+
 ExUnit.start                                # set up the test runner
 
 defmodule ListasTest do
   use ExUnit.Case                          # use requires a module and sets up macros; will explore more later
 
-
-  test 'prueba basica' do
+  test 'Basic Test' do
     assert GreaterNumber.get([50, 2, 9, 1]) == 95021
   end
  
