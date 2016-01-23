@@ -62,5 +62,9 @@ defmodule GreatestNumberTest do
     assert GreatestNumber.get([5354, 535, 53, 5]) == "5535535453"
   end
 
+  test 'Subsets test' do
+    assert GreatestNumber.get([11311, 113, 1131]) == "113113111311"
+  end
+
  
 end
