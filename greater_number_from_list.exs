@@ -14,7 +14,7 @@ defmodule GreatestNumber do
             n2 > n1 ->
               true
             n2 == n1 ->
-              o2 > o1
+              get_average(n2) > get_average(n1)
             n2 < n1 ->
               false
           end
@@ -22,7 +22,20 @@ defmodule GreatestNumber do
       |> Enum.reverse
       |> Enum.reduce("", fn {el, _}, acc -> acc <> Integer.to_string el end )
   end
+  def get_average(str_number) do
+    sum = fn 
+        "", acc -> {0, acc}
+        n, acc  -> 
+          n = String.to_integer n
+          {n , n + acc}
+      end
+    IO.inspect sum.("2", 7)
+    { _ , sum} = str_number
+      |> String.split("")
+      |> Enum.map_reduce(0, sum)
 
+    sum / String.length(str_number)
+  end
   def process_list([el|tail], {max, max_str, max_c}) do
     str_el = Integer.to_string el
     len = String.length str_el
