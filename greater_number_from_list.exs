@@ -55,7 +55,12 @@ defmodule GreatestNumberTest do
   use ExUnit.Case                          # use requires a module and sets up macros; will explore more later
 
   test 'Basic Test' do
-    assert GreatestNumber.get([50, 2, 9, 1]) == 95021
+    assert GreatestNumber.get([50, 2, 9, 1]) == "95021"
   end
+
+  test 'Medium difficult test' do
+    assert GreatestNumber.get([5354, 535, 53, 5]) == "5535535453"
+  end
+
  
 end
