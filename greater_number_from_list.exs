@@ -47,46 +47,15 @@ defmodule GreatestNumber do
 
 end
 
-# defmodule Otra do
-#   def get_nth_digit(list) do
-#     list |> Enum.map(fn initial ->
-#       { String.to_integer(String.at(initial, 0)),
-#         String.slice(initial, 1..-1),
-#         initial
-#       }end)
-#   end
+# Failing Repeating the first number: 53(55), 5354, 52
 
-#   def group_by_initial(list) do
-#     list |> Enum.group_by fn {first, _, _} ->
-#       first
-#     end
-#   end
+ExUnit.start                                # set up the test runner
 
-#   def select_max_number(list) do
-#     current = 0
-#     list |> Enum.filter(fn el ->
+defmodule GreatestNumberTest do
+  use ExUnit.Case                          # use requires a module and sets up macros; will explore more later
 
-#       if Enum.at(el, 0) >= current do
-#         current
-#       end
-#     end)
-#   end
-
-#   @doc "Returns the length of the longest number"
-#   def get_string_list(list) do
-#     list |> Enum.map fn el -> [el, Integer.to_string]
-#   end
-# end
-
-# # Failing Repeating the first number: 53(55), 5354, 52
-
-# ExUnit.start                                # set up the test runner
-
-# defmodule GreatestNumberTest do
-#   use ExUnit.Case                          # use requires a module and sets up macros; will explore more later
-
-#   test 'Basic Test' do
-#     assert GreatestNumber.get([50, 2, 9, 1]) == 95021
-#   end
+  test 'Basic Test' do
+    assert GreatestNumber.get([50, 2, 9, 1]) == 95021
+  end
  
-# end
+end
