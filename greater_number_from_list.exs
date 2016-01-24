@@ -14,8 +14,8 @@ defmodule GreatestNumber do
             n2 > n1 ->
               true
             n2 == n1 ->
-              avg_1 = get_average(n1)
-              avg_2 = get_average(n2)
+              avg_1 = get_average(Integer.to_string n1)
+              avg_2 = get_average(Integer.to_string n2)
               if avg_2 == avg_1 do
                 o2 > o1
               else
@@ -85,7 +85,7 @@ defmodule GreatestNumberTest do
     assert GreatestNumber.get([11311, 113, 1131]) == "113113111311"
   end
   test 'Subsets greater numbers' do
-    assert GreatestNumber.get([44344, 443, 4434]) == "44344444434443"
+    assert GreatestNumber.get([44344, 443, 4434]) == "443444434443"
   end
  
 end
