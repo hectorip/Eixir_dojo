@@ -14,7 +14,13 @@ defmodule GreatestNumber do
             n2 > n1 ->
               true
             n2 == n1 ->
-              get_average(n2) > get_average(n1)
+              avg_1 = get_average(n1)
+              avg_2 = get_average(n2)
+              if avg_2 == avg_1 do
+                o2 > o1
+              else
+                avg_2 > avg_1
+              end
             n2 < n1 ->
               false
           end
