@@ -56,7 +56,7 @@ defmodule GreatestNumber do
         max_str = str_el
       end
     end
-    IO.inspect {el, int_el, max}
+    # IO.inspect {el, int_el, max}
     [{el, int_el} | process_list(tail, {max, max_str, max_c})]
   end
 
@@ -86,6 +86,13 @@ defmodule GreatestNumberTest do
   end
   test 'Subsets greater numbers' do
     assert GreatestNumber.get([44344, 443, 4434]) == "443444434443"
+  end
+
+  test 'Consecutive numbers' do
+    assert GreatestNumber.get([1, 2, 3, 4, 5, 6, 7 ,8 , 9]) == "987654321"
+  end
+  test 'Desc consecutive numbers' do
+    assert GreatestNumber.get([1000, 200, 30, 4]) == "4302001000"
   end
  
 end
