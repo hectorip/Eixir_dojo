@@ -19,7 +19,7 @@ defmodule GreatestNumber do
               else
                 avg_2 > avg_1
               end
-            _ ->
+            true ->
               n2 > n1
           end
         end) 
