@@ -95,4 +95,7 @@ defmodule GreatestNumberTest do
   test 'Repeated numbers test' do
     assert GreatestNumber.get([111, 111, 111, 222, 22]) == "22222111111111"
   end
+  test 'Repeated' do
+    assert GreatestNumber.get([101, 101, 10, 10]) == "1011011010"
+  end
 end
