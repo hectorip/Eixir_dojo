@@ -11,8 +11,6 @@ defmodule GreatestNumber do
     res_list
       |> Enum.sort(fn {o1, n1},{o2, n2} ->
           cond do
-            n2 > n1 ->
-              true
             n2 == n1 ->
               avg_1 = get_average(Integer.to_string o1)
               avg_2 = get_average(Integer.to_string o2)
@@ -21,8 +19,8 @@ defmodule GreatestNumber do
               else
                 avg_2 > avg_1
               end
-            n2 < n1 ->
-              false
+            _ ->
+              n2 > n1
           end
         end) 
       |> Enum.reverse
@@ -68,10 +66,10 @@ end
 
 # Failing Repeating the first number: 53(55), 5354, 52
 
-ExUnit.start                                # set up the test runner
+ExUnit.start
 
 defmodule GreatestNumberTest do
-  use ExUnit.Case                          # use requires a module and sets up macros; will explore more later
+  use ExUnit.Case
 
   test 'Basic Test' do
     assert GreatestNumber.get([50, 2, 9, 1]) == "95021"
@@ -94,5 +92,7 @@ defmodule GreatestNumberTest do
   test 'Desc consecutive numbers' do
     assert GreatestNumber.get([1000, 200, 30, 4]) == "4302001000"
   end
- 
+  test 'Repeated numbers test' do
+    assert GreatestNumber.get([111, 111, 111, 222, 22]) == "22222111111111"
+  end
 end
