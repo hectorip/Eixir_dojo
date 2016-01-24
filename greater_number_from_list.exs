@@ -14,8 +14,8 @@ defmodule GreatestNumber do
             n2 > n1 ->
               true
             n2 == n1 ->
-              avg_1 = get_average(Integer.to_string n1)
-              avg_2 = get_average(Integer.to_string n2)
+              avg_1 = get_average(Integer.to_string o1)
+              avg_2 = get_average(Integer.to_string o2)
               if avg_2 == avg_1 do
                 o2 > o1
               else
