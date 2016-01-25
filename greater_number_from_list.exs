@@ -98,4 +98,10 @@ defmodule GreatestNumberTest do
   test 'Repeated' do
     assert GreatestNumber.get([101, 101, 10, 10]) == "1011011010"
   end
+  test 'test from website' do
+    assert GreatestNumber.get([56, 5, 50]) == "56550"
+  end
+   test 'another test from website' do
+    assert GreatestNumber.get([420, 42, 423]) == "42423420"
+  end
 end
