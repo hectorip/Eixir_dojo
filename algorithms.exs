@@ -4,13 +4,13 @@ defmodule Algorithms do
     list |> Enum.sort fn el, el2 ->
       str_n = Integer.to_string el
       str_n2 = Integer.to_string el2
-      if (str_n <> str_n2) > (str_n2 > str_2) do
+      if (str_n <> str_n2) > (str_n2 <> str_n) do
         1
       else
         -1
       end
 
-      if (str_n <> str_n2) == (str_n2 > str_2) do
+      if (str_n <> str_n2) == (str_n2 <> str_n) do
         0
       end
     end
@@ -19,7 +19,7 @@ end
 
 ExUnit.start
 
-defmodule greatest_number do
+defmodule TestGreatestNumber do
   use ExUnit.Case
 
   test 'Basic Test' do
@@ -55,3 +55,4 @@ defmodule greatest_number do
    test 'another test from website' do
     assert Algorithms.greatest_number([420, 42, 423]) == "42423420"
   end
+end
