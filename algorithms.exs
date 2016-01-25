@@ -1,22 +1,15 @@
 defmodule Algorithms do
   
   def greatest_number(list) do
-    list |> Enum.sort fn el, el2 ->
-      str_n = Integer.to_string el
-      str_n2 = Integer.to_string el2
-      if (str_n <> str_n2) > (str_n2 <> str_n) do
-        1
-      else
-        -1
+    list |> Enum.map(&Integer.to_string/1) |>Enum.sort fn el, el2 ->
+      cond do
+        (el <> el2) == (el2 < > el) -> 0
+        (el <> el2) > (el2 <> el) -> 1
+        true -> -1
       end
-
-      if (str_n <> str_n2) == (str_n2 <> str_n) do
-        0
-      end
-    end
+    end |> Enum.join
   end
 end
-
 ExUnit.start
 
 defmodule TestGreatestNumber do
