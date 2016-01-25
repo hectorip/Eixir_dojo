@@ -2,12 +2,8 @@ defmodule Algorithms do
   
   def greatest_number(list) do
     list |> Enum.map(&Integer.to_string/1) |> Enum.sort(fn el, el2 ->
-      cond do
-        (el <> el2) == (el2 <> el) -> 0
-        (el <> el2) > (el2 <> el) -> 1
-        true -> -1
-      end
-    end) |> IO.inspect
+        (el <> el2) >= (el2 <> el)
+    end) |> Enum.join
   end
 
 end
