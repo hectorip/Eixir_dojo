@@ -19,39 +19,39 @@ end
 
 ExUnit.start
 
-defmodule GreatestNumberTest do
+defmodule greatest_number do
   use ExUnit.Case
 
   test 'Basic Test' do
-    assert GreatestNumber.get([50, 2, 9, 1]) == "95021"
+    assert Algorithms.greatest_number([50, 2, 9, 1]) == "95021"
   end
 
   test 'Medium difficult test' do
-    assert GreatestNumber.get([5354, 535, 53, 5]) == "5535535453"
+    assert Algorithms.greatest_number([5354, 535, 53, 5]) == "5535535453"
   end
 
   test 'Subsets test' do
-    assert GreatestNumber.get([11311, 113, 1131]) == "113113111311"
+    assert Algorithms.greatest_number([11311, 113, 1131]) == "113113111311"
   end
   test 'Subsets greater numbers' do
-    assert GreatestNumber.get([44344, 443, 4434]) == "443444434443"
+    assert Algorithms.greatest_number([44344, 443, 4434]) == "443444434443"
   end
 
   test 'Consecutive numbers' do
-    assert GreatestNumber.get([1, 2, 3, 4, 5, 6, 7 ,8 , 9]) == "987654321"
+    assert Algorithms.greatest_number([1, 2, 3, 4, 5, 6, 7 ,8 , 9]) == "987654321"
   end
   test 'Desc consecutive numbers' do
-    assert GreatestNumber.get([1000, 200, 30, 4]) == "4302001000"
+    assert Algorithms.greatest_number([1000, 200, 30, 4]) == "4302001000"
   end
   test 'Repeated numbers test' do
-    assert GreatestNumber.get([111, 111, 111, 222, 22]) == "22222111111111"
+    assert Algorithms.greatest_number([111, 111, 111, 222, 22]) == "22222111111111"
   end
   test 'Repeated' do
-    assert GreatestNumber.get([101, 101, 10, 10]) == "1011011010"
+    assert Algorithms.greatest_number([101, 101, 10, 10]) == "1011011010"
   end
   test 'test from website' do
-    assert GreatestNumber.get([56, 5, 50]) == "56550"
+    assert Algorithms.greatest_number([56, 5, 50]) == "56550"
   end
    test 'another test from website' do
-    assert GreatestNumber.get([420, 42, 423]) == "42423420"
+    assert Algorithms.greatest_number([420, 42, 423]) == "42423420"
   end
